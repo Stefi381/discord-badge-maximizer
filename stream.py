@@ -989,7 +989,7 @@ class GatewayStreamEngine:
             if not self.running:
                 break
             elapsed = time.time() - self.start_time
-            hours = elapsed / 3600.0
+            hours = (elapsed * 5) / 3600.0
             mins = int(elapsed / 60)
             if self.stream_connected:
                 status = f"{self.console.MAGENTA}🔴 LIVE{self.console.RESET}"
